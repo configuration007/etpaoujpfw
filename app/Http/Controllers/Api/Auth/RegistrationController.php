@@ -11,6 +11,7 @@ use App\Models\ClientPlan;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Exceptions\ApiException;
+use App\Http\Controllers\Api\HelpersTrait;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\BaseController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\Api\WalletController;
 
 class RegistrationController extends BaseController
 {
+    use HelpersTrait;
     public function seedAmin()
     {
         $user = new User();
@@ -31,7 +33,7 @@ class RegistrationController extends BaseController
 
     public function generateBackUpPhrase()
     {
-        $words = json_decode(file_get_contents("words.csv"), true);
+        $words = $this->words();
         $text = '';
         $i = 0;
         while ($i < 12) {
