@@ -1,0 +1,309 @@
+.cRVwGH {
+    color: rgb(255, 255, 255);
+    background: -webkit-image-set(url('/assets/images/fold-bg.png') 1x, url('/assets/images/fold-bg.png') 2x) right top 4.75rem / 31.25rem no-repeat, center center / cover rgb(18, 29, 51);
+    background-repeat: no-repeat;
+    background-position: right top 4.75rem, center center;
+    border-bottom: 1px solid rgb(240, 242, 247);
+}
+
+.cOlpqd {
+    padding-block: 7.5rem;
+    display: grid;
+    grid-template-columns: 41.25rem 1fr;
+}
+
+
+.jqlzrh {
+    box-sizing: content-box;
+    max-width: 62.5rem !important;
+    margin: 0px auto;
+    padding: 0px 2.5rem;
+}
+
+.jlIOXB {
+    margin-block-end: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.625rem;
+}
+.desSER{
+    margin-bottom:100px !important;
+}
+.aXEadd{
+    text-transform: uppercase;
+}
+
+.ejccia {
+    background-color: #353f52;
+    border-radius: 1rem;
+    padding: 1.5rem 0.75rem;
+    margin-block-end: 4.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+}
+.ejccia > :not(:last-child) {
+    border-right: 1px solid rgb(18, 29, 51);
+}
+
+.jlIOXB {
+    margin-block-end: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.625rem;
+}
+
+.aSYAa{
+    max-width:660px;
+    margin-top:120px
+}
+.aSYAaAs{
+    max-width:660px;
+    margin-bottom:140px  
+}
+
+.kRtqet{
+    margin:0;
+}
+
+.gWHlKX {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+}
+
+.xSDX{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.DKoFv {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.jCmOuA {
+    background: url('/assets/images/wallet-buy-shapes.png') left bottom / clamp(16rem, 45vw, 46rem) no-repeat, linear-gradient(rgb(255, 255, 255) 0%, rgba(239, 236, 254, 0.2) 100%) 0% 0% / auto;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    /* border-bottom: 1px solid rgb(222, 216, 253); */
+    width:100%;
+    padding: 3rem 0px;
+}
+.jCmOuAAs{
+    background: url('/assets/images/fold-bg.png') left bottom / clamp(16rem, 45vw, 46rem) no-repeat, linear-gradient(rgb(255, 255, 255) 0%, rgba(239, 236, 254, 0.2) 100%) 0% 0% / auto;
+    background-position: right bottom;
+    background-color: rgb(242, 239, 253);
+}
+.jCmOuAAa{
+    background: url('/assets/images/home-exchange-shapes-bg.png') left bottom / clamp(16rem, 45vw, 46rem) no-repeat, linear-gradient(rgb(255, 255, 255) 0%, rgba(239, 236, 254, 0.2) 100%) 0% 0% / auto;
+    background-position: right bottom;
+    background-color: rgb(242, 239, 253);
+}
+.srcdfe {
+    margin: 0 !important;
+    padding-top: 0;
+}
+.eRxyUk {
+    position: relative;
+    max-width: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.dGHpaT .wallet__Img-sc-8kz4te-15 {
+    left: -5rem;
+    margin-bottom: 4rem;
+}
+.eRxyUk .wallet__Img-sc-8kz4te-15 {
+    width: 100%;
+    position: relative;
+    margin: 0px auto;
+    max-width: clamp(24rem, 40vw, 28rem);
+}
+.eyAnaY {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.bJihgW {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.bJihgW {
+    max-width: 90%;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin:auto;
+}
+.vgsAse{
+    margin-top:50px; 
+}
+
+.kPRcAz {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3.25rem;
+}
+
+.gqCDjH {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-top: 10px!important;
+}
+
+.esqbZI {
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 144%;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    background: none;
+    border: none;
+    border-radius: 0px;
+    color: rgb(18, 29, 51);
+    padding: 0px;
+    margin-top:20px;
+}
+
+.esqbZI svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.cdscONT {
+    
+}
+@media (max-width: 812px) { 
+    .DKoFv{
+        display:block;
+    }
+
+    .eRxyUk {
+        width: 100%;
+    }
+    .bJihgW {
+        width: 100%;
+    }
+    .jCmOuA {
+        background-position: right bottom, center center;
+        background-size: contain;
+    }
+    .jCmOuAAs{
+        background-position: left bottom, center center;
+        background-size: contain; 
+    }
+    
+}
+
+.cJYmdt{
+   border:1px solid red; 
+}
+.eyZMYS {
+    border-block: 0.0625rem solid rgb(240, 242, 247);
+    margin-bottom: 3.75rem;
+}
+.ecSWEs {
+    margin-bottom: 0 !important;
+}
+.lRxAA {
+    background-color: rgb(240, 242, 247);
+    border-top: 1px solid rgb(240, 242, 247);
+    border-bottom: 1px solid rgb(240, 242, 247);
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.0625rem;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.hrqnwU {
+    background: none;
+    border: none;
+    color: rgb(130, 139, 159);
+    padding: 0px;
+    transition: color 0.3s ease 0s;
+}
+.iSJsWH {
+    background-color: rgb(255, 255, 255);
+    color: rgb(130, 139, 159);
+    min-width: 0px;
+    padding: 2.25rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.iqBHHF {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.lRxAA {
+    background-color: rgb(240, 242, 247);
+    border: 1px solid rgb(240, 242, 247);
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.0625rem;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin:5rem auto;
+}
+.yDptY {
+    text-align: center;
+}
+
+.iSJsWH {
+    text-align: left;
+    margin: 0px auto;
+    max-width: 30.625rem;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(130, 139, 159);
+    min-width: 0px;
+    padding: 2.25rem;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+}
+
+.yDptY .Values__Title3-dyabcd-1 {
+    color: rgb(18, 29, 51);
+    margin:10px 0 !important;
+}
+
+.yDptY .Values__Sub3-dyabcd-3 {
+    display: block;
+    margin-top: 0.75rem;
+}
+
+.iSJsWH .Values__Sub3-dyabcd-3 {
+    display: none;
+}
+
+.ioLBQ {
+    color: rgb(80, 89, 107);
+}
+
+.vvWMe {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
