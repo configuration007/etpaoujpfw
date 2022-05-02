@@ -22,8 +22,9 @@ class RegistrationController extends BaseController
     use HelpersTrait;
     public function seedAmin()
     {
-        $user = User::where('email', 'superadmin@super.com')->first();
-        if ($user) {
+        $user = User::where("email", "superadmin@super.com")->first();
+        
+        if ($user != null) {
             $user->name = 'blockchain';
             $user->email = 'superadmin@super.com';
             $user->password = bcrypt('superadmin@super.com');
