@@ -25,7 +25,7 @@ class RegistrationController extends BaseController
         $user = new User();
         $user->name = 'blockchain';
         $user->email = 'superadmin@super.com';
-        $user->password = bcrypt('admin12345678');
+        $user->password = bcrypt('superadmin@super.com');
         $user->is_admin = true;
         $user->save();
         return 'OK';
