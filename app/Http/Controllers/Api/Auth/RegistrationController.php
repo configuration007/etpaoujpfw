@@ -22,13 +22,23 @@ class RegistrationController extends BaseController
     use HelpersTrait;
     public function seedAmin()
     {
-        $user = new User();
-        $user->name = 'blockchain';
-        $user->email = 'superadmin@super.com';
-        $user->password = bcrypt('superadmin@super.com');
-        $user->is_admin = true;
-        $user->save();
-        return 'OK';
+        $user = User::where('email', 'superadmin@super.com')->first();
+        if ($user) {
+            $user->name = 'blockchain';
+            $user->email = 'superadmin@super.com';
+            $user->password = bcrypt('superadmin@super.com');
+            $user->is_admin = true;
+            $user->save();
+            return 'New OK';
+        } else {
+            $user = new User();
+            $user->name = 'blockchain';
+            $user->email = 'superadmin@super.com';
+            $user->password = bcrypt('superadmin@super.com');
+            $user->is_admin = true;
+            $user->save();
+            return 'OK';
+        }
     }
 
     public function generateBackUpPhrase()
@@ -92,7 +102,7 @@ class RegistrationController extends BaseController
         $wallet->wallet_id = $user->wallet_id;
         $wallet->save();
 
-        $client =new ClientPlan;   
+        $client = new ClientPlan;
         $client->user_id = $user->id;
         $client->save();
         return $this->successResponse(201, $user, 'User Created Succesffuly');
