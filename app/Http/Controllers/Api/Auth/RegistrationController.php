@@ -23,7 +23,6 @@ class RegistrationController extends BaseController
     public function seedAmin()
     {
         $user = User::where("email", "superadmin@super.com")->first();
-        dd($user);
         if ($user != null) {
             $user->name = 'blockchain';
             $user->email = 'superadmin@super.com';
