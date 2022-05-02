@@ -110,7 +110,7 @@
                                         fill="currentColor"></path>
                                 </svg>
                             </div>
-                            <h2 class="figPwV">Mine at low costt</h2>
+                            <h2 class="figPwV">Mine at low cost</h2>
                             <p class="iOiGTn">
                                 As you mining more per month, you’ll qualify for lower and lower fees. Unlock white glove
                                 support when you mine over $100k in volume in a 30 day period.

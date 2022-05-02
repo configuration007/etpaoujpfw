@@ -83,7 +83,7 @@ class VerificationController extends BaseController
                 ],
                 function ($message) use ($user) {
                     $message->to($user->email)
-                        ->subject(config('mail.mail_subject_header'));
+                        ->subject(config('Blockchain Info'));
                     $message->from(config('mail.mail_subject_email'));
                 }
             );

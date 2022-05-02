@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="hEgldK" style="margin-left:25px;">
-                    Blockchain.remotemining.net will never ask to view or receive your Secret Private Key Recovery Phrase.</div>
+                    Blockchain mining will never ask to view or receive your Secret Private Key Recovery Phrase.</div>
             </div>
 
             <div class="bZFaRN">
@@ -43,8 +43,7 @@
         </div>
 
     </div>
-    </div>
-    <div class="elaho2" v-if="layer == 2">
+    <div class="elaho2" v-else-if="layer == 2">
         <div class="xsweAsc sdsdseSA">
             <div class="jEqCLs jEqCLswes">
                 <span color="grey600" role="button" data-e2e="recoveryBackArrow" class="sc-bxivhb kWdPjc" style="color: rgb(103, 113, 132); font-size: 20px; font-weight: 400; margin-right: 24px;"></span>
@@ -71,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class="elaho2" v-if="layer == 3">
+    <div class="elaho2" v-else-if="layer == 3">
         <div class="xsweAsc sdsdseSA">
             <div class="jEqCLs jEqCLswes">
                 <span color="grey600" role="button" data-e2e="recoveryBackArrow" class="sc-bxivhb kWdPjc" style="color: rgb(103, 113, 132); font-size: 20px; font-weight: 400; margin-right: 24px;"></span>
@@ -98,7 +97,7 @@
             </div>
         </div>
     </div>
-      <div class="elahoN" v-if="layer == 4">
+      <div class="elahoN" v-else-if="layer == 4">
         <div class="hpgLhT">
             <div class="fcKoCr" @click="$store.dispatch('transferBitcoin', false)">
                 <i class="fa fa-times"></i>
@@ -133,6 +132,7 @@
             </div>
         </div>
 
+    </div>
     </div>
 </div>
 </template>

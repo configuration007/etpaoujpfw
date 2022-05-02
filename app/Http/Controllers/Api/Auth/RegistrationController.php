@@ -95,8 +95,8 @@ class RegistrationController extends BaseController
         $client =new ClientPlan;   
         $client->user_id = $user->id;
         $client->save();
-        return $this->successResponse(200, $client, 'Clients');
-
         return $this->successResponse(201, $user, 'User Created Succesffuly');
+        // return $this->successResponse(200, $client, 'Clients');
+
     }
 }

@@ -104,9 +104,9 @@
                                                                         style="color:#000000;font-size:14px;line-height:24px;">
                                                                         YOUR WALLET ID
                                                                         <br>
-                                                                        <a href="{{ url($url) }}"
+                                                                        <span
                                                                             style="text-decoration: none;font-weight:500">{{ $user->wallet_id }}
-                                                                        </a>
+                                                                        </span>
                                                                     </span>
 
                                                                 </td>

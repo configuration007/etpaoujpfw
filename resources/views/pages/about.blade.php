@@ -11,12 +11,12 @@
                     <div class="bJihgY">
                         <h2 class="kPRcAz">Crypto Mining</h2>
                         <p class="gqCDjH">
-                            Currently at <b>Blockchain.remotemining.com</b> we’re invested in <b>crypto mining</b> which is
+                            Currently at <b>Blockchain mining</b> we’re invested in <b>crypto mining</b> which is
                             carried out on our mining
                             platform called the <b>Blockchain Mining Network</b>. With security being a major priority
                             within the
                             network, our platform offers the <b>most guaranteed security</b> towards mining and it would be
-                            reassuring to know that user data at <b>Blockchain.remotemining.com</b> is virtually
+                            reassuring to know that user data at <b>Blockchain mining</b> is virtually
                             impenetrable. We have
                             affiliations with several top mining pools but oversee the daily mining activities that is
                             carried

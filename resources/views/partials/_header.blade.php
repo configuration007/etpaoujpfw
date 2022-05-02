@@ -129,7 +129,7 @@
                                 </div>
                                 <div class="kfOoa">
                                     <p class="kmtyGJ">
-                                        Statistic
+                                        Statistics
                                     </p>
                                     <p class="hhsbKz">
                                         View market data

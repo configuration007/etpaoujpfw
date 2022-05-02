@@ -36,7 +36,7 @@
                             class="wallet__Img-sc-8kz4te-15 eyAnaY">
                     </div>
                     <div class="bJihgW">
-                        <h2 class="kPRcAz">About Cyrpto Mining</h2>
+                        <h2 class="kPRcAz">Blockchain Mining</h2>
                         <p class="gqCDjH">
                             Bitcoin mining is the process of creating new bitcoin by solving puzzles. It consists of
                             computing
