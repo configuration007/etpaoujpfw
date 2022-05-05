@@ -62,6 +62,7 @@ Route::group([
     Route::delete('/dest_wallet/{id}', [AdminController::class, "deleteDestWallets"]);
     Route::post('/update_withdrawal_plan', [AdminController::class, "updateWithdrawalPlan"]);
     Route::post('/send_notification', [AdminController::class, "sendNotification"]);
+    Route::get('/dest_transaction', [AdminController::class, "getTransactions"]);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

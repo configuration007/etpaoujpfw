@@ -103,6 +103,13 @@ class AdminController extends BaseController
         $users = User::where('is_admin', false)->with('wallet')->with('plan')->get();
         return $this->successResponse(200, $users, 'Clients');
     }
+
+
+    public function getTransactions(){
+        $transactions = Transaction::select()->with('user')->get();
+        return $this->successResponse(200, $transactions, 'Clients Transaction');
+    }
+    
     public function transaction(Request $request)
     {
         $transaction  = new Transaction();

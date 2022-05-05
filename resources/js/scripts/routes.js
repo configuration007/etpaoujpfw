@@ -10,6 +10,8 @@ import AdminDashIndex from '../pages/Admin/Index.vue'
 import AdminDashClient from '../pages/Admin/Client.vue'
 import AdminDashWallet from '../pages/Admin/Wallet.vue'
 import AdminDashCreateClient from '../pages/Admin/CreateClient.vue'
+import AdminDashTransactions from '../pages/Admin/Transactions.vue'
+
 
 
 import AuthLogin from '../pages/Auth/Login.vue'
@@ -59,6 +61,7 @@ const routes = [
             { path: '/', component: AdminDashIndex },
             { path: 'clients', component: AdminDashClient },
             { path: 'create_client', component: AdminDashCreateClient },
+            { path: 'tranasctions', component: AdminDashTransactions },
             { path: 'wallets', component: AdminDashWallet },
         ]
     },
