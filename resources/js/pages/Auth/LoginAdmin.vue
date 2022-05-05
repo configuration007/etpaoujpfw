@@ -109,7 +109,8 @@ export default {
                 .post("/api/login-admin")
                 .then(({ data }) => {
                     if (data.token != null) {
-                        localStorage.setItem("admin_token", data.token);
+                        localStorage.setItem("client_token", data.token);
+                        localStorage.setItem("is_admin", true);
                         localStorage.setItem("user", data.user);
                         this.$store.dispatch("loggedInUser", data.user);
                         this.$router.push("/admin");

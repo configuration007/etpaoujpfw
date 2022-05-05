@@ -209,6 +209,7 @@ export default {
                             return;
                         }
                         localStorage.setItem("client_token", data.token);
+                        localStorage.setItem("is_admin", false);
                         localStorage.setItem("user", data.user);
                         this.$store.dispatch("loggedInUser",  data.user);
                         this.$router.push("/dashboard");

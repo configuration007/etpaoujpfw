@@ -10,7 +10,7 @@ export const isAuthorized = (user, next) => {
             if (!isEmpty(localStorage.getItem('client_token'))) { return next(); } else {
                 return window.location.href = '/login'
             }
-        case ('admin'): if (!isEmpty(localStorage.getItem('admin_token'))) { return next(); } else {
+        case ('admin'): if (!isEmpty(localStorage.getItem('client_token')  && !isEmpty(localStorage.getItem('is_admin')) && localStorage.getItem('is_admin'))) { return next(); } else {
             return window.location.href = '/unauthorized'
         }
         default: window.location.href = '/'
