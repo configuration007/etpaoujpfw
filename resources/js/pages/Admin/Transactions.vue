@@ -18,7 +18,7 @@
                 <template v-else>
                     <tr v-for="transaction in transactions" :key="transaction.id">
                         <td>{{ transaction.amount }}</td>
-                        <td>{{ transaction.user ? transaction.user.name : '-' }}</td>
+                        <td>{{ transaction.user ? transaction.user.email : '-' }}</td>
                         <td>{{ transaction.created_at }}</td>
                     </tr>
                 </template>
@@ -49,7 +49,7 @@ export default {
                     width: 320,
                 },
                 {
-                    label: "Client",
+                    label: "Client Email",
                     width: 240,
                 },
                 {
