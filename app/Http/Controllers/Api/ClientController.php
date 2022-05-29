@@ -8,6 +8,7 @@ use App\Models\Wallet;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Http\Controllers\BaseController;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends BaseController
 {
@@ -76,7 +77,8 @@ class ClientController extends BaseController
 
     public function transactions()
     {
-        $transaction  =  Transaction::get();
+        $me = auth('api')->user();
+        $transaction  =  Transaction::where('user_id',  $me->id)->get();
 
         return $this->successResponse(200, $transaction, 'Clients Unit Transaction');
     }
