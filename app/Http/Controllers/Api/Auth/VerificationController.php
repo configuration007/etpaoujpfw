@@ -10,9 +10,12 @@ use App\Exceptions\ApiException;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\BaseController;
+use App\Http\Controllers\Api\HelpersTrait;
 
 class VerificationController extends BaseController
 {
+    use HelpersTrait;
+
     public function generateVerificationLink($user_id)
     {
         $sentTime = Carbon::now()->toDateTimeString();

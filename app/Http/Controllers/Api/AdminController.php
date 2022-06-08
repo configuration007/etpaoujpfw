@@ -15,6 +15,8 @@ use App\Http\Controllers\BaseController;
 
 class AdminController extends BaseController
 {
+    use HelpersTrait;
+    
     public function sendNotification(Request $request)
     {
         $notification = new ClientNotification();
