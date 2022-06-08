@@ -25,7 +25,7 @@
         <div class="resdUS">
             <form class="gCdspF" v-if="is_processing" @submit.prevent="initiateTransaction">
                 <div class="cdsdASDC">
-                    <label>Passwird</label>
+                    <label>Password</label>
                     <div class="sDEad">
                         <input class="gqlmIw" type="password" v-model="payload.password" required />
                     </div>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="cdsdASDC">
-                    <label>New Password</label>
+                    <label>Confirm Password</label>
                     <div class="sDEad">
                         <input class="gqlmIw" type="password" v-model="payload.password_confirmation" required />
                     </div>
