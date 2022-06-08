@@ -11,48 +11,24 @@
                     <div class="bJihgY">
                         <h2 class="kPRcAz">Crypto Mining</h2>
                         <p class="gqCDjH">
-                            Currently at <b>Blockchain mining</b> we’re invested in <b>crypto mining</b> which is
-                            carried out on our mining
-                            platform called the <b>Blockchain Mining Network</b>. With security being a major priority
-                            within the
-                            network, our platform offers the <b>most guaranteed security</b> towards mining and it would be
-                            reassuring to know that user data at <b>Blockchain mining</b> is virtually
-                            impenetrable. We have
-                            affiliations with several top mining pools but oversee the daily mining activities that is
-                            carried
-                            out on the network.
+                            The Blockchain Remote Mining is a crypto mining platform, and a subsidiary of Blockchain. We developed this platform to provide a massively stable investment option for individuals through crypto mining activities on the blockchain. With support from it's parent company, we've been able to successfully generate hundreds of millions of dollars, and thousands of bitcoins for investors and institutions since inception.
                         </p>
                         <p class="gqCDjH">
-                            <b>Crypto Mining</b> is one of the world’s most lucrative earning process and the <b>Blockchain
-                                Mining
-                                Network</b> offers a reasonable amount of generated returns on investment <b>(ROI)</b>.
-                            Understanding
-                            the process alone explains how secure mining on our platform can be.
+                            Our platform offers the most guaranteed security towards crypto mining, and a user friendly mining system. When it comes to ensuring that your crypto is secure, we think about every last detail so you don’t have to. It would be reassuring to know that user data at Blockchain Remote Mining is virtually impenetrable. 
 
                         </p>
                         <p class="gqCDjH">
-                            <b> Bitcoin Mining </b> is the process that leads to the delivery of new bitcoins, it involves
-                            generating
-                            and earning off the confirmation of blocks of transactions on a network such as the <b>
-                                Blockchain
-                                Mining Network </b>.
-                        </p>
-                        <p class="gqCDjH">
-                            With the <b>Blockchain Mining Network </b>, mining operations are carried out on a<b> Proof Of
-                                Stake
-                                (POS) </b>basis. The <b>POS </b>comes into play because it helps us generate the necessary
-                            <b>ROI</b> for each
-                            investor. ROI are based on the amount invested in securing spaces on the network which simply
-                            put means; an individual can mine according to the number of bitcoins that individual holds
-                            <b>(initial capital input)</b>. The larger the amount of bitcoins owns, the greater the returns
-                            on
-                            investments.
-                        </p>
-                        <p class="gqCDjH">
+                            Crypto mining is one of the world’s most lucrative earning process, and Blockchain Remote Mining offers a reasonable amount of generated return on investment (ROI). Understanding the process alone explains how secure mining on our platform can be. 
 
                         </p>
                         <p class="gqCDjH">
-
+                            With Blockchain Remote Mining, mining operations are carried out on a Proof of Stake (POS) basis which allows us generate the required ROI for each investor. This simply means ROI are largely determined by the amount of capital invested, an individual can mine according to the number of bitcoins that individuals holds (initial capital input).
+                        </p>
+                        <p class="gqCDjH">
+                            The entire concept of mining on our platform is a simple one that affords you the advantage of investing, mining and earning inside of a private mining wallet. The process is complete safe and efficient, with the only risk involved being capital fluctuations, as well as the crypto market itself. However, this barely affects your earnings as soon as your input is locked in. 
+                        </p>
+                        <p class="gqCDjH">
+                            This is an earning program that allows you make the best of your bitcoin balance. You are not required to have any technical knowledge or purchase mining devices in order to earn, a basic registration is all that’s required. In simpler words, we offer an easy, transparent and secure means of investing in crypto.
                         </p>
                         <a href="{{ url('contact') }}" class="esqbZI"> Learn More
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -362,11 +338,11 @@
                 <div class="DKoFv">
                     <div class="bJihgW vgsAse">
                         <p class="gqCDjH">
-                            Each mining pool operated under the <b>Blockchain Mining Network</b> consists of an average <b>500
+                            Each mining pool operated under the <b>Bitcoin Mining Network</b> consists of an average <b>500
                             bitmain device</b>, specifically the Antminer S17pro models.
                         </p>
                         <p class="gqCDjH">
-                            The entire concept of mining on the <b>Blockchain Mining Network</b> is a simple one that affords
+                            The entire concept of mining on the <b>Bitcoin Mining Network</b> is a simple one that affords
                             you the advantage of investing, mining and earning inside of a <b>private mining wallet</b>.
                             Depending on your capital input, the generated <b>ROI</b> will range between <b>35% - 50%</b>. The
                             maximum <b>50%</b> at optimum level and <b>35%</b> in case of any difficulty which may arise during the

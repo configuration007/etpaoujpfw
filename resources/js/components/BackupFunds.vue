@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="hEgldK" style="margin-left:25px;">
-                    Blockchain mining will never ask to view or receive your Secret Private Key Recovery Phrase.</div>
+                    Bitcoin Mining will never ask to view or receive your Secret Private Key Recovery Phrase.</div>
             </div>
 
             <div class="bZFaRN">

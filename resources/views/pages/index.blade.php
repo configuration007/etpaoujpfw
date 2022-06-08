@@ -14,7 +14,7 @@
                             The world’s most secure and effective mining Platform
                         </h1>
                         <p class="hrbjxU">
-                            Trusted by millions since 2015 and backed by the most trusted technology and asmart contracts
+                            Trusted by millions since 2015 and backed by the most trusted technology and smart contracts
                         </p>
                         <div class="">
                             <a href="{{ url('register') }}" class="cnYUjy">Get Started</a>
@@ -74,7 +74,7 @@
                                 </g>
                             </svg>
                             <p class="gNGpcW">
-                                Minner
+                                Miner
                             </p>
                         </div>
                         <h2 class="iQLqHO">The Most Powerful Mining platform</h2>
@@ -97,8 +97,7 @@
 
                             @include('partials.unit-tab' ,[
                             'header' => 'Low Volatility Risk',
-                            'desc' =>'One of the big problems is the volatility of the cryptocurrencies. the blockchain
-                            mining provide a minimal risk return proxy.',
+                            'desc' =>'Under Low Volatility Risk please change the write up to “One of the big problems is the volatility of crypto. Blockchain remote mining provides a minimal risk return proxy.',
                             'class' => 'eHbXX img_dfts',
                             'text_class' => 'vvWMe hbnAur'
                             ])
@@ -111,8 +110,7 @@
                             ])
                             @include('partials.unit-tab' ,[
                             'header' => 'Early Return on Investment (ROI)',
-                            'desc' =>'With a pre-configured mining farm, return on first capital investment occurs in less
-                            than 72 hours of first deposit.',
+                            'desc' =>'With a pre-configured mining farm, return on investment is generated within the first month of deposit, and consecutively.',
                             'class' => 'eHbXX img_dfts',
                             'text_class' => 'vvWMe hbnAur'
                             ])

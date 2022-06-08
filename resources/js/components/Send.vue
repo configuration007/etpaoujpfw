@@ -13,7 +13,7 @@
                 <i class="fa fa-cart"></i>
             </div>
             <div class="xsweAsc">
-                <div class="jEqCLV">Send Bitcoin from Minner.</div>
+                <div class="jEqCLV">Send Bitcoin from Miner.</div>
                 <div class="cDNAIu">
                     Easily buy and sell Crypto straight from your Wallet.
                 </div>

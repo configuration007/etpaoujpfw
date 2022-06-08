@@ -36,7 +36,7 @@
                             class="wallet__Img-sc-8kz4te-15 eyAnaY">
                     </div>
                     <div class="bJihgW">
-                        <h2 class="kPRcAz">Blockchain Mining</h2>
+                        <h2 class="kPRcAz">Bitcoin Mining</h2>
                         <p class="gqCDjH">
                             Bitcoin mining is the process of creating new bitcoin by solving puzzles. It consists of
                             computing
@@ -70,7 +70,7 @@
             <div class="jqlzrh">
                 <div class="DKoFv">
                     <div class="bJihgW">
-                        <h2 class="kPRcAz">Blockchain Mining</h2>
+                        <h2 class="kPRcAz">Bitcoin Mining</h2>
                         <p class="gqCDjH">
                             At the heart of bitcoin mining is a math puzzle that miners are supposed to solve in order to
                             earn bitcoin rewards. The puzzle is called proof of work (PoW), a reference to the computational

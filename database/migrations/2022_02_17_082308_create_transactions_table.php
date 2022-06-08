@@ -22,7 +22,7 @@ class CreateTransactionsTable extends Migration
             $table->string('status')->nullable();
             $table->string('type')->nullable();
             $table->string('description')->nullable();
-            $table->string('minner_response')->nullable();
+            $table->string('Miner_response')->nullable();
             $table->string('user_id');
             $table->timestamps();
         });
