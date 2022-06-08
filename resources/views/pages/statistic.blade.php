@@ -40,7 +40,7 @@
                     <div class="hwxLFE">
                         <img alt="Powerful Dashboard" width="1159" height="668"
                             src="/assets/images/landing_dashboard-img.png"
-                            srcset="/assets/images/landing_dashboard-img2x.png 2x" class="kWvxxP">
+                            class="kWvxxP">
                     </div>
                 </div>
                 <div class="jqlzrh">
