@@ -98,7 +98,7 @@
                             @include('partials.unit-tab', [
                                 'header' => 'Low Volatility Risk',
                                 'desc' =>
-                                    'Under Low Volatility Risk please change the write up to “One of the big problems is the volatility of crypto. Blockchain remote mining provides a minimal risk return proxy.',
+                                    'One of the big problems is the volatility of crypto. Blockchain remote mining provides a minimal risk return proxy.',
                                 'class' => 'eHbXX img_dfts',
                                 'text_class' => 'vvWMe hbnAur',
                             ])
@@ -136,7 +136,7 @@
                 <div class="iXKGHe isMobile">
                     <div class="slick-carousel  sliderHolder liTytT">
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Zero Inflation Impact',
                             'last_text' => 'In developing countries such as Venezuela, life’s a struggle as inflation heads for
                                                 one million percent.',
@@ -145,7 +145,7 @@
                             'image_height' => '375',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => '2B Access',
                             'last_text' => 'In the world without any access or ability to obtain a bank account or manage their
                                                 money.',
@@ -154,16 +154,15 @@
                             'image_height' => '375',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Low Volatility Risk',
-                            'last_text' => 'One of the big problems is the volatility of the cryptocurrencies. the blockchain
-                                                mining provide a minimal risk return proxy.',
+                            'last_text' => 'One of the big problems is the volatility of crypto. Blockchain remote mining provides a minimal risk return policy',
                             'image_url' => '/assets/images/img-3.png',
                             'image_width' => '266',
                             'image_height' => '375',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Minimal Complexity',
                             'last_text' => 'Setting up a mining farm is extremely complex with countless smart contracts, this
                                                 comes out of the box, pre-installed.',
@@ -172,7 +171,7 @@
                             'image_height' => '238',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Early Return on Investment (ROI)',
                             'last_text' => 'With a pre-configured mining farm, return on first capital investment occurs in less
                                                 than 72 hours of first deposit.',
@@ -258,7 +257,7 @@
                 <div class="llRhaW isMobile">
                     <div class="slick-carousel  sliderHolder liTytT">
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Zero Inflation Impact',
                             'last_text' => 'In developing countries such as Venezuela, life’s a struggle as inflation heads for
                                                                     one million percent.',
@@ -267,7 +266,7 @@
                             'image_height' => '375',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => '2B Access',
                             'last_text' => 'In the world without any access or ability to obtain a bank account or manage their
                                                                     money.',
@@ -276,7 +275,7 @@
                             'image_height' => '375',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Low Volatility Risk',
                             'last_text' => 'One of the big problems is the volatility of the cryptocurrencies. the blockchain
                                                                     mining provide a minimal risk return proxy.',
@@ -285,7 +284,7 @@
                             'image_height' => '375',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Minimal Complexity',
                             'last_text' => 'Setting up a mining farm is extremely complex with countless smart contracts, this
                                                                     comes out of the box, pre-installed.',
@@ -294,7 +293,7 @@
                             'image_height' => '238',
                         ])
                         @include('partials.card-one', [
-                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Early Return on Investment (ROI)',
                             'last_text' => 'With a pre-configured mining farm, return on first capital investment occurs in less
                                                                     than 72 hours of first deposit.',
