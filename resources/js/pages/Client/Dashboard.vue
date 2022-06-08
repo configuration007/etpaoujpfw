@@ -1,7 +1,6 @@
 <template>
 <div class="dashboard_wrapper">
     <Drawer />
-
     <v-app id="inspire">
         <div class="_navigation">
             <div class="hCNyBo">
@@ -19,7 +18,7 @@
                                     <div class="txt">Email</div>
                                 </router-link>
                             </li>
-                            <div class="lmjspY"></div>
+                            <div class="lmjspY"> {{ $store.getters.getLoggedInUser.email }} </div>
                             <li class="sc-iujRgT iumRbO">
                                 <router-link to="/dashboard" class="_lnks">
                                     <span class="ico"></span>
@@ -81,8 +80,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="uyrvDUYEhs">
+                 
+        </div>
         <div class="dashboard_body">
+        
             <div :class="tog ? 'side_bar open' : 'side_bar'">
                 <div class="rgrQc">
                     <div class="iANjPF">

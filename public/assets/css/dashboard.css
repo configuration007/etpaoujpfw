@@ -270,6 +270,7 @@ a._lnks .txt {
 .lmjspY {
     height: 20px;
     border-left: 1px solid rgb(53, 63, 82);
+    color:white !important
 }
 
 .dashboard_body {
@@ -296,7 +297,11 @@ a._lnks .txt {
     transition: left 0.3s ease-in-out 0s;
     z-index: 11;
 }
-
+.uyrvDUYEhs{
+    width:100%;
+    /* border:1px solid red; */
+    height:80px;
+}
 .rgrQc {
     position: relative;
     display: flex;

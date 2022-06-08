@@ -86,8 +86,8 @@ class VerificationController extends BaseController
                 ],
                 function ($message) use ($user) {
                     $message->to($user->email)
-                        ->subject(config('Blockchain Info'));
-                    $message->from(config('mail.mail_subject_email'));
+                        ->subject('Please Verify Your Email Address');
+                    $message->from('notify@remotemining.net');
                 }
             );
             $this->log($user->id, 'Email Verification Sent');
