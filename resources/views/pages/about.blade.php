@@ -338,25 +338,18 @@
                 <div class="DKoFv">
                     <div class="bJihgW vgsAse">
                         <p class="gqCDjH">
-                            The Blockchain Remote Mining is a crypto mining platform, and a subsidiary of Blockchain. We developed this platform to provide a massively stable investment option for individuals through crypto mining activities on the blockchain. With support from it's parent company, we've been able to successfully generate hundreds of millions of dollars, and thousands of bitcoins for investors and institutions since inception.
-                        </p>
+                     The mining process is carried out by moving each users investments into a public mining ledger which has an individual connection with the entire mining devices our platform, here your capital is mined and transformed into earnings. A mining cycle is the amount of time it takes for the completion of a single mining operation.    </p>
                         <p class="gqCDjH">
-                            Our platform offers the most guaranteed security towards crypto mining, and a user friendly mining system. When it comes to ensuring that your crypto is secure, we think about every last detail so you don’t have to. It would be reassuring to know that user data at Blockchain Remote Mining is virtually impenetrable. 
-
-                        </p>
+                            A single mining cycle will run for a duration of 30 days. At the completion of mining cycles, earnings are automatically disbursed from the mining ledger balance into the various connected mining wallets. This cycle based technique helps in delivering returns accordingly. The inception of various security protocols further makes mining on the Blockchain Remote Mining platform safe and secure.        </p>
                         <p class="gqCDjH">
                             Crypto mining is one of the world’s most lucrative earning process, and Blockchain Remote Mining offers a reasonable amount of generated return on investment (ROI). Understanding the process alone explains how secure mining on our platform can be. 
 
                         </p>
                         <p class="gqCDjH">
-                            With Blockchain Remote Mining, mining operations are carried out on a Proof of Stake (POS) basis which allows us generate the required ROI for each investor. This simply means ROI are largely determined by the amount of capital invested, an individual can mine according to the number of bitcoins that individuals holds (initial capital input).
-                        </p>
+                            Getting started is straight forward, a simple registration at it’s primary stages using a valid email address is all that is required. This will lead to the generation of a private mining wallet. Users are required to undergo the email verification process to complete registration. The more miners are successfully registered on our platform the higher our harsh rates which causes faster profits, and the less likely for us to incur losses during any stage of mining.</p>
+        
                         <p class="gqCDjH">
-                            The entire concept of mining on our platform is a simple one that affords you the advantage of investing, mining and earning inside of a private mining wallet. The process is complete safe and efficient, with the only risk involved being capital fluctuations, as well as the crypto market itself. However, this barely affects your earnings as soon as your input is locked in. 
-                        </p>
-                        <p class="gqCDjH">
-                            This is an earning program that allows you make the best of your bitcoin balance. You are not required to have any technical knowledge or purchase mining devices in order to earn, a basic registration is all that’s required. In simpler words, we offer an easy, transparent and secure means of investing in crypto.
-                        </p>
+                            At the end of mining cycles, users can decide to withdraw their earnings or opt in for    </p>
                     </div>
                     <div class="eRxyUk">
                         <img src="/assets/images/img-4.png" alt="" width="1075" height="683">
