@@ -47,6 +47,8 @@ Route::group([
     Route::get('/get_backup_phrase', [ClientController::class, "getBackupPhrase"]);
     Route::post('/initiate_transaction', [ClientController::class, "initiateTransaction"]);
     Route::get('/logs', [ClientController::class, "getLogs"]);
+    Route::post('/change_email', [ClientController::class, "changeEmail"]);
+    Route::post('/change_password', [ClientController::class, "changePassword"]);
 });
 
 Route::group([

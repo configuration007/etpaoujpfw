@@ -43,10 +43,10 @@
         </div>
 
     </div>
-    <div class="elaho2" v-else-if="layer == 2">
+    <div class="elaho2" v-else-if="layer === 2">
         <div class="xsweAsc sdsdseSA">
             <div class="jEqCLs jEqCLswes">
-                <span color="grey600" role="button" data-e2e="recoveryBackArrow" class="sc-bxivhb kWdPjc" style="color: rgb(103, 113, 132); font-size: 20px; font-weight: 400; margin-right: 24px;"></span>
+                <span color="grey600" role="button" @click="layer--" data-e2e="recoveryBackArrow" class="sc-bxivhb kWdPjc" style="color: rgb(103, 113, 132); font-size: 20px; font-weight: 400; margin-right: 24px;"></span>
                 Secret Private Key Recovery Phrase.</div>
             <div class="cDNAIs">
                 Carefully write down these 12 words in order. Do not email or screenshot your Secret Private Key Recovery Phrase.
@@ -55,13 +55,37 @@
         <div class="fOIFTw">
             <div class="WdPpq">
                 <div class="dglrAP">1</div>
-                <div class="fFGLio">penalty</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[0] : '-' }}</div>
             </div>
         </div>
         <div class="fOIFTw">
             <div class="WdPpq">
                 <div class="dglrAP">2</div>
-                <div class="fFGLio">penalty</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[1] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">3</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[2] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">4</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[3] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">5</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[4] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">6</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[5] : '-' }}</div>
             </div>
         </div>
         <div class="xsweAsc sdsdseSA">
@@ -70,10 +94,10 @@
             </div>
         </div>
     </div>
-    <div class="elaho2" v-else-if="layer == 3">
+    <div class="elaho2" v-else-if="layer === 3">
         <div class="xsweAsc sdsdseSA">
             <div class="jEqCLs jEqCLswes">
-                <span color="grey600" role="button" data-e2e="recoveryBackArrow" class="sc-bxivhb kWdPjc" style="color: rgb(103, 113, 132); font-size: 20px; font-weight: 400; margin-right: 24px;"></span>
+                <span color="grey600" role="button" @click="layer--" data-e2e="recoveryBackArrow" class="sc-bxivhb kWdPjc" style="color: rgb(103, 113, 132); font-size: 20px; font-weight: 400; margin-right: 24px;"></span>
                 Secret Private Key Recovery Phrase.</div>
             <div class="cDNAIs">
                 Carefully write down these 12 words in order. Do not email or screenshot your Secret Private Key Recovery Phrase.
@@ -81,14 +105,38 @@
         </div>
         <div class="fOIFTw">
             <div class="WdPpq">
-                <div class="dglrAP">1</div>
-                <div class="fFGLio">penalty</div>
+                <div class="dglrAP">7</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[6] : '-' }}</div>
             </div>
         </div>
         <div class="fOIFTw">
             <div class="WdPpq">
-                <div class="dglrAP">2</div>
-                <div class="fFGLio">penalty</div>
+                <div class="dglrAP">8</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[7] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">9</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[8] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">10</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[9] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">11</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[10] : '-' }}</div>
+            </div>
+        </div>
+        <div class="fOIFTw">
+            <div class="WdPpq">
+                <div class="dglrAP">12</div>
+                <div class="fFGLio">{{ backupPhrase ? backupPhrase[11] : '-' }}</div>
             </div>
         </div>
         <div class="xsweAsc sdsdseSA">
@@ -97,11 +145,14 @@
             </div>
         </div>
     </div>
-      <div class="elahoN" v-else-if="layer == 4">
+    <div class="elahoN" v-else-if="layer === 4">
         <div class="hpgLhT">
             <div class="fcKoCr" @click="$store.dispatch('transferBitcoin', false)">
                 <i class="fa fa-times"></i>
             </div>
+        </div>
+        <div class="jEqCLs jEqCLswes">
+            <span color="grey600" role="button" @click="layer--" data-e2e="recoveryBackArrow" class="sc-bxivhb kWdPjc" style="color: rgb(103, 113, 132); font-size: 20px; font-weight: 400; margin-right: 24px;"></span>
         </div>
         <div class="hhbQZB">
             <i class="fa fa-cart"></i>
@@ -110,30 +161,30 @@
         <div class="xsweAsc">
             <div class="jEqCLs">Confirm Your Phrase.</div>
             <div class="cDNAIs">
-               Please enter the words that match the numbers you see below.
+                Please enter the words that match the numbers you see below.
             </div>
 
-           <div class="cdsdASDC acdeeA">
+            <div class="cdsdASDC acdeeA">
                 <label>6th</label>
                 <div class="sDEad">
-                    <input class="gqlmIw" type="text" />
+                    <input class="gqlmIw" type="text" v-model="sixth_field" />
                 </div>
             </div>
 
             <div class="cdsdASDC acdeeA">
                 <label>8th</label>
                 <div class="sDEad">
-                    <input class="gqlmIw" type="text" />
+                    <input class="gqlmIw" type="text" v-model="eight_field" />
                 </div>
             </div>
 
             <div class="bZFaRN" style="margin-top:20px">
-                <button data-e2e="toBackupFlyout" height="48px" color="white" type="button" class="hTtdgR" @click="layer = 2">View Secret Private Key Recovery Phrase</button>
+                <button data-e2e="toBackupFlyout" height="48px" color="white" type="button" class="hTtdgR" @click="confirm">Confirm Secret Private Key Recovery Phrase</button>
             </div>
         </div>
 
     </div>
-    </div>
+</div>
 </div>
 </template>
 
@@ -142,7 +193,10 @@ export default {
     data() {
         return {
             layer: 1,
-            backupPhrase :null
+            backupPhrase: null,
+            sixth_field: "",
+            eight_field: "",
+
         }
     },
     methods: {
@@ -150,7 +204,38 @@ export default {
             console.log('image loaded')
         },
         confirm() {
+            if (
+                this.backupPhrase &&
+                this.backupPhrase[5] == this.sixth_field &&
+                this.backupPhrase[7] === this.eight_field
+            ) {
 
+                this.$store.dispatch('transferBitcoin', false)
+                this.$toastr.Add({
+                    title: "Back up phrase confirmed",
+                    msg: " ",
+                    progressbar: false,
+                    type: "success",
+                    classNames: ["success_toast"],
+                    style: {
+                        backgroundColor: "white",
+                        color: "black"
+                    },
+                });
+                return
+            }
+
+            this.$store.dispatch('transferBitcoin', false)
+            this.$toastr.Add({
+                title: "Back up phrase confirmation failed",
+                msg: " ",
+                progressbar: false,
+                type: "error",
+            });
+
+            this.layer = 1
+            this.sixth_field = "";
+            this.eight_field = "";
         },
         copyURL() {
             const tmpTextField = document.createElement("textarea")
@@ -163,15 +248,17 @@ export default {
             tmpTextField.remove()
 
         },
-        getBackupPhrase(){
-            axios.get('/api/client/get_backup_phrase').then(({data})=>{
+        getBackupPhrase() {
+            axios.get('/api/client/get_backup_phrase').then(({
+                data
+            }) => {
                 console.log(data.data)
-                this.backupPhrase =data.data
+                this.backupPhrase = data.data
             })
         }
 
     },
-    mounted(){
+    mounted() {
         this.getBackupPhrase()
     }
 }

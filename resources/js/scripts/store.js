@@ -33,6 +33,9 @@ export const store = new Vuex.Store({
         },
         getClientDetail: (state) => {
             return state.current_client
+        },
+        getLoggedInUser: (state) => {
+            return state.logged_in_user
         }
 
     },

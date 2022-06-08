@@ -137,7 +137,7 @@ export default {
             })
             this.$store.dispatch("closeDraw");
         }
-        
+
     },
     mounted() {
         this.setWallet();

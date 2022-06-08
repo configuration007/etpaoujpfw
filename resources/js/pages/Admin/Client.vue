@@ -1,275 +1,165 @@
 <template>
-    <div>
-        <v-app id="inspire">
-            <v-data-table
-                :headers="headers"
-                :items="clients"
-                sort-by="calories"
-                class="elevation-1"
-            >
-                <template v-slot:top>
-                    <v-toolbar flat>
-                        <v-toolbar-title>All Clients</v-toolbar-title>
-                        <v-divider class="mx-4" inset vertical></v-divider>
-                        <v-spacer></v-spacer>
+<div>
+    <v-app id="inspire">
+        <v-data-table :headers="headers" :items="clients" sort-by="calories" class="elevation-1">
+            <template v-slot:top>
+                <v-toolbar flat>
+                    <v-toolbar-title>All Clients</v-toolbar-title>
+                    <v-divider class="mx-4" inset vertical></v-divider>
+                    <v-spacer></v-spacer>
 
-                        <input
-                            type="hidden"
-                            v-model="copied_me"
-                            id="copied_me"
-                        />
-                        <v-dialog v-model="dialog" max-width="500px">
-                            <v-card>
-                                <v-card-title class="headline">
-                                    Notifications
-                                    <v-btn
-                                        x-small
-                                        color="red lighten-1"
-                                        @click="view_notice = !view_notice"
-                                        >{{
+                    <input type="hidden" v-model="copied_me" id="copied_me" />
+                    <v-dialog v-model="dialog" max-width="500px">
+                        <v-card>
+                            <v-card-title class="headline">
+                                Notifications
+                                <v-btn x-small color="red lighten-1" @click="view_notice = !view_notice">{{
                                             view_notice ? "Add" : "View"
-                                        }}</v-btn
-                                    >
-                                </v-card-title>
-                                <v-card-text v-if="view_notice">
-                                    <v-list-item
-                                        v-for="data in all_notification"
-                                        :key="data.id"
-                                    >
-                                        <v-list-item-content>
-                                            <v-list-item-title>{{
+                                        }}</v-btn>
+                            </v-card-title>
+                            <v-card-text v-if="view_notice">
+                                <v-list-item v-for="data in all_notification" :key="data.id">
+                                    <v-list-item-content>
+                                        <v-list-item-title>{{
                                                 data.type
                                             }}</v-list-item-title>
-                                            <v-list-item-subtitle>{{
+                                        <v-list-item-subtitle>{{
                                                 data.message
                                             }}</v-list-item-subtitle>
-                                        </v-list-item-content>
-                                        <v-list-item-action>
-                                            <v-btn icon>
-                                                <v-btn
-                                                    x-small
-                                                    color="red lighten-1"
-                                                    @click="
+                                    </v-list-item-content>
+                                    <v-list-item-action>
+                                        <v-btn icon>
+                                            <v-btn x-small color="red lighten-1" @click="
                                                         deleteNotification(
                                                             data.id
                                                         )
-                                                    "
-                                                    >Delete</v-btn
-                                                >
-                                            </v-btn>
-                                        </v-list-item-action>
-                                    </v-list-item>
-                                </v-card-text>
-                                <v-card-text v-else>
-                                    <v-container>
-                                        <v-row>
-                                            <v-col cols="12" sm="12" md="12">
-                                                <v-text-field
-                                                    :rules="['Required']"
-                                                    v-model="
+                                                    ">Delete</v-btn>
+                                        </v-btn>
+                                    </v-list-item-action>
+                                </v-list-item>
+                            </v-card-text>
+                            <v-card-text v-else>
+                                <v-container>
+                                    <v-row>
+                                        <v-col cols="12" sm="12" md="12">
+                                            <v-text-field :rules="['Required']" v-model="
                                                         notification.message
-                                                    "
-                                                    label="Notification Message"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="12" md="12">
-                                                <v-select
-                                                    :rules="['Required']"
-                                                    v-model="notification.type"
-                                                    :items="[
+                                                    " label="Notification Message"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="12" md="12">
+                                            <v-select :rules="['Required']" v-model="notification.type" :items="[
                                                         'Error',
                                                         'Success',
                                                         'Warning',
-                                                    ]"
-                                                    label="Notification Type"
-                                                    solo
-                                                ></v-select>
-                                            </v-col>
-                                            <v-col cols="4" sm="4" md="4">
-                                                <v-btn
-                                                    color="red lighten-2"
-                                                    elevation="2"
-                                                    small
-                                                    @click="addNotification"
-                                                    >Add Notification</v-btn
-                                                >
-                                            </v-col>
-                                        </v-row>
-                                    </v-container>
-                                </v-card-text>
-
-                                <v-card-actions>
-                                    <v-spacer></v-spacer>
-                                    <v-btn
-                                        color="blue darken-1"
-                                        text
-                                        @click="close"
-                                    >
-                                        Cancel
-                                    </v-btn>
-                                </v-card-actions>
-                            </v-card>
-                        </v-dialog>
-
-                        <v-dialog v-model="dialogDelete" max-width="500px">
-                            <v-card>
-                                <v-card-title class="headline"
-                                    >Are you sure you want to delete this
-                                    item?</v-card-title
-                                >
-                                <v-card-actions>
-                                    <v-spacer></v-spacer>
-
-                                    <v-row justify="center">
-                                        <v-btn
-                                            color="blue lighten-2"
-                                            elevation="2"
-                                            small
-                                            @click="closeDelete"
-                                            >Cancel</v-btn
-                                        >
-                                        <v-btn
-                                            color="red lighten-2"
-                                            elevation="2"
-                                            small
-                                            @click="deleteItemConfirm"
-                                            >Yes, Delete</v-btn
-                                        >
+                                                    ]" label="Notification Type" solo></v-select>
+                                        </v-col>
+                                        <v-col cols="4" sm="4" md="4">
+                                            <v-btn color="red lighten-2" elevation="2" small @click="addNotification">Add Notification</v-btn>
+                                        </v-col>
                                     </v-row>
-                                    <v-spacer></v-spacer>
-                                </v-card-actions>
-                            </v-card>
-                        </v-dialog>
+                                </v-container>
+                            </v-card-text>
 
-                        <v-dialog v-model="dialogMiner" max-width="500px">
-                            <v-card>
-                                <v-card-title class="headline"
-                                    >Client Finance?</v-card-title
-                                >
-                                <v-card-text>
-                                    <v-container>
-                                        <v-row>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn color="blue darken-1" text @click="close">
+                                    Cancel
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-dialog>
+
+                    <v-dialog v-model="dialogDelete" max-width="500px">
+                        <v-card>
+                            <v-card-title class="headline">Are you sure you want to delete this
+                                item?</v-card-title>
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+
+                                <v-row justify="center">
+                                    <v-btn color="blue lighten-2" elevation="2" small @click="closeDelete">Cancel</v-btn>
+                                    <v-btn color="red lighten-2" elevation="2" small @click="deleteItemConfirm">Yes, Delete</v-btn>
+                                </v-row>
+                                <v-spacer></v-spacer>
+                            </v-card-actions>
+                        </v-card>
+                    </v-dialog>
+
+                    <v-dialog v-model="dialogMiner" max-width="500px">
+                        <v-card>
+                            <v-card-title class="headline">Client Finance?</v-card-title>
+                            <v-card-text>
+                                <v-container>
+                                    <v-row>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_bitcoin
-                                                    "
-                                                    label="BTC BALANCE"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                                                    " label="BTC BALANCE"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_ethereum
-                                                    "
-                                                    label="ETH BALANCE"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                                                    " label="ETH BALANCE"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_ripple
-                                                    "
-                                                    label="XPR BALANCE"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                                                    " label="XPR BALANCE"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_tether
-                                                    "
-                                                    label="BTC GOLD"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                                                    " label="BTC GOLD"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_stellar
-                                                    "
-                                                    label="STELLAR"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                                                    " label="STELLAR"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_algorand
-                                                    "
-                                                    label="ALGORAND"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                                                    " label="ALGORAND"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_litecoin
-                                                    "
-                                                    label="LITECOIN"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-text-field
-                                                    v-model="
+                                                    " label="LITECOIN"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-text-field v-model="
                                                         mining_record.mining_balance_monero
-                                                    "
-                                                    label="MONERO"
-                                                ></v-text-field>
-                                            </v-col>
-                                            <v-col cols="12" sm="6" md="4">
-                                                <v-btn
-                                                    @click="updateMiningBalance"
-                                                    color="red lighten-2"
-                                                    elevation="2"
-                                                    small
-                                                    >Update Balance</v-btn
-                                                >
-                                            </v-col>
-                                        </v-row>
-                                    </v-container>
-                                </v-card-text>
-                            </v-card>
-                        </v-dialog>
-                    </v-toolbar>
-                </template>
+                                                    " label="MONERO"></v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="6" md="4">
+                                            <v-btn @click="updateMiningBalance" color="red lighten-2" elevation="2" small>Update Balance</v-btn>
+                                        </v-col>
+                                    </v-row>
+                                </v-container>
+                            </v-card-text>
+                        </v-card>
+                    </v-dialog>
+                </v-toolbar>
+            </template>
 
-                <template v-slot:item.actions="{ item }">
-                    <v-row justify="center">
-                        <v-btn
-                            color="red lighten-2"
-                            elevation="2"
-                            small
-                            @click="deleteItem(item)"
-                            >Delete Client</v-btn
-                        >
-                        <v-btn
-                            color="blue lighten-2"
-                            elevation="2"
-                            small
-                            @click="openMining(item)"
-                            >Account</v-btn
-                        >
-                        <v-btn
-                            color="green lighten-2"
-                            elevation="2"
-                            small
-                            @click="openNotification(item.id)"
-                            >Notification
-                        </v-btn>
-                        <v-btn
-                            color="black lighten-2"
-                            class="white--text"
-                            elevation="2"
-                            small
-                            @click="copyClientCode(item)"
-                            >Copy
-                        </v-btn>
-                    </v-row>
-                </template>
-                <template v-slot:no-data>
-                    <v-btn color="primary" @click="initialize"> Refresh </v-btn>
-                </template>
-            </v-data-table>
-        </v-app>
-    </div>
+            <template v-slot:item.actions="{ item }">
+                <v-row justify="center">
+                    <v-btn color="red lighten-2" elevation="2" small @click="deleteItem(item)">Delete Client</v-btn>
+                    <v-btn color="blue lighten-2" elevation="2" small @click="openMining(item)">Account</v-btn>
+                    <v-btn color="green lighten-2" elevation="2" small @click="openNotification(item.id)">Notification
+                    </v-btn>
+                    <v-btn color="black lighten-2" class="white--text" elevation="2" small @click="copyClientCode(item)">Copy
+                    </v-btn>
+                </v-row>
+            </template>
+            <template v-slot:no-data>
+                <v-btn color="primary" @click="initialize"> Refresh </v-btn>
+            </template>
+        </v-data-table>
+    </v-app>
+</div>
 </template>
+
 <script>
 export default {
     data() {
@@ -297,14 +187,19 @@ export default {
             dialog: false,
             dialogDelete: false,
             dialogMiner: false,
-            headers: [
-                {
+            headers: [{
                     text: "Client Email",
                     align: "start",
                     value: "email",
                 },
-                { text: "Wallet ID", value: "access_id" },
-                { text: "Access code", value: "blockchain_access_key" },
+                {
+                    text: "Wallet ID",
+                    value: "access_id"
+                },
+                {
+                    text: "Access code",
+                    value: "blockchain_access_key"
+                },
                 {
                     text: "Actions",
                     value: "actions",
@@ -365,7 +260,9 @@ export default {
         deleteNotification(id) {
             axios
                 .delete("/api/delete_notification/" + id)
-                .then(({ data }) => {
+                .then(({
+                    data
+                }) => {
                     this.openNotification(this.currentNotificationId);
                 })
                 .catch((e) => {
@@ -378,7 +275,9 @@ export default {
                     "/api/add_notification/" + this.currentNotificationId,
                     this.notification
                 )
-                .then(({ data }) => {
+                .then(({
+                    data
+                }) => {
                     this.openNotification(this.currentNotificationId);
                 })
                 .catch((e) => {
@@ -386,7 +285,9 @@ export default {
                 });
         },
         initialize() {
-            axios.get("/api/view_client").then(({ data }) => {
+            axios.get("/api/view_client").then(({
+                data
+            }) => {
                 this.clients = data;
             });
         },
@@ -399,7 +300,9 @@ export default {
         openMining(item) {
             var id = item.id;
             this.currentMiningId = id;
-            axios.get("/api/client_mining/" + id).then(({ data }) => {
+            axios.get("/api/client_mining/" + id).then(({
+                data
+            }) => {
                 this.mining_record = data;
                 this.dialogMiner = true;
             });
@@ -410,7 +313,9 @@ export default {
                     "/api/client_update_mining/" + this.currentMiningId,
                     this.mining_record
                 )
-                .then(({ data }) => {
+                .then(({
+                    data
+                }) => {
                     this.initialize();
                     this.dialogMiner = false;
                 })
@@ -423,7 +328,9 @@ export default {
             this.view_notice = true;
             axios
                 .get("/api/get_notification/" + this.currentNotificationId)
-                .then(({ data }) => {
+                .then(({
+                    data
+                }) => {
                     this.all_notification = data;
                     this.dialog = true;
                 })
@@ -439,7 +346,9 @@ export default {
         deleteItemConfirm() {
             axios
                 .delete("/api/delete_client/" + this.editedIndex)
-                .then(({ data }) => {
+                .then(({
+                    data
+                }) => {
                     this.initialize();
                 });
             this.closeDelete();
@@ -471,16 +380,19 @@ export default {
     },
 };
 </script>
+
 <style>
 #copied_me {
     border: 1px solid #ccc;
     min-width: 350px;
 }
+
 #copied_me:focus {
     border: 1px solid green;
     min-width: 350px;
     outline: none;
 }
+
 .v-btn {
     margin: auto 2px !important;
 }

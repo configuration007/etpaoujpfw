@@ -15,7 +15,7 @@
                     <!--End Client-->
 
                     <!--Admin-->
-                    
+
                     <Transaction v-if="$store.getters.getCurrentPage == 'transactions'" />
                     <WalletTopup v-if="$store.getters.getCurrentPage == 'wallet-topup'" />
                     <WithdrawalStatus v-if="$store.getters.getCurrentPage == 'withdrawal-status'" />
@@ -25,7 +25,7 @@
                     <!--End Admin-->
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </div>
 </template>

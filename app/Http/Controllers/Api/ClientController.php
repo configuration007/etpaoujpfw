@@ -8,17 +8,57 @@ use App\Models\User;
 use App\Models\Wallet;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use App\Exceptions\ApiException;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\BaseController;
 use App\Http\Controllers\Api\HelpersTrait;
 
 class ClientController extends BaseController
 {
     use HelpersTrait;
+
+
+    public function changeEmail(Request $request)
+    {
+        $user =  auth('api')->user();
+        $email = $user->email;
+
+        if (!Hash::check($email,  $request->password)) {
+            throw new ApiException('invalid password');
+        }
+
+        $user = User::find($user->id);
+        $user->email = $request->email;
+        $user->save();
+        return $this->successResponse(200, null, 'Email changed succesffully');
+    }
+
+    public function changePassword(Request $request)
+    {
+        $user =  auth('api')->user();
+        $email = $user->email;
+
+        if (!Hash::check($email,  $request->password)) {
+            throw new ApiException('invalid password');
+        }
+
+        if($request->new_password  != $request->new_password){
+            throw new ApiException('Password and password confirmation does not match');
+        }
+
+        $user = User::find($user->id);
+        $user->password = $request->new_password;
+        $user->save();
+        return $this->successResponse(200, null, 'Password changed succesffully');
+    }
+
     public function getBackupPhrase()
     {
         $user  = auth('api')->user();
         $phrase = User::find($user->id);
-        $this->log($user->id , 'Obtained backup phrase');
+        $this->log($user->id, 'Obtained backup phrase');
+        $phrase = explode('|', $phrase->back_up_phrase);
         return $this->successResponse(200, $phrase, 'Backup phrase');
     }
 
@@ -28,7 +68,7 @@ class ClientController extends BaseController
         $plan = User::find($user->id)->plan;
 
         $data = $plan ? $plan->barcode : '';
-        $this->log($user->id , 'Obtained barcode');
+        $this->log($user->id, 'Obtained barcode');
 
         return $this->successResponse(200, $data, 'Transction processed');
     }
@@ -47,7 +87,7 @@ class ClientController extends BaseController
         $transaction->status = $plan->allow_withdrawal ? 'proccessing' : 'failed';
         $transaction->type = 'Send';
         $transaction->save();
-        $this->log($user->id , 'Initiated a transaction');
+        $this->log($user->id, 'Initiated a transaction');
 
         $data = $plan->withdrawal_message;
 
@@ -84,7 +124,7 @@ class ClientController extends BaseController
     {
         $me = auth('api')->user();
         $transaction  =  Transaction::where('user_id',  $me->id)->get();
-        $this->log($me->id , 'Viewed transactions');
+        $this->log($me->id, 'Viewed transactions');
 
         return $this->successResponse(200, $transaction, 'Clients Unit Transaction');
     }
@@ -94,7 +134,7 @@ class ClientController extends BaseController
     {
         $user = auth('api')->user();
         $logs  =  Log::where('user_id',  $user->id)->get();
-        $this->log($user->id , 'Viewed Logs');
+        $this->log($user->id, 'Viewed Logs');
 
         return $this->successResponse(200, $logs, 'Logs');
     }
@@ -103,7 +143,7 @@ class ClientController extends BaseController
     {
         $user = auth('api')->user();
         $transaction  =  Transaction::where('fiat', $fiat)->get();
-        $this->log($user->id , 'Viewed transactions');
+        $this->log($user->id, 'Viewed transactions');
 
         return $this->successResponse(200, $transaction, 'Clients Unit Transaction');
     }
