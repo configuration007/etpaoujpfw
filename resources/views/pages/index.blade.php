@@ -31,10 +31,10 @@
                 <div class="evZIbd">
                     <div class="iGlXs">
                         <div class="hIwTsa">
-                            @include('partials._price', ['currency'=>'bitcoin','code'=>'btc'])
-                            @include('partials._price', ['currency'=>'ethereum','code'=>'eth'])
-                            @include('partials._price', ['currency'=>'ripple','code'=>'xlm'])
-                            @include('partials._price', ['currency'=>'stellar','code'=>'algo'])
+                            @include('partials._price', ['currency' => 'bitcoin', 'code' => 'btc'])
+                            @include('partials._price', ['currency' => 'ethereum', 'code' => 'eth'])
+                            @include('partials._price', ['currency' => 'ripple', 'code' => 'xlm'])
+                            @include('partials._price', ['currency' => 'stellar', 'code' => 'algo'])
                         </div>
                     </div>
                 </div>
@@ -80,39 +80,41 @@
                         <h2 class="iQLqHO">The Most Powerful Mining platform</h2>
 
                         <div class="eyLHGH">
-                            @include('partials.unit-tab' ,[
-                            'header' => 'Zero Inflation Impact',
-                            'desc' =>'In developing countries such as Venezuela, life’s a struggle as inflation heads for
-                            one million percent.',
-                            'class' => 'eHbXX img_dfts active',
-                            'text_class' => 'vvWMe hbnAur active'
+                            @include('partials.unit-tab', [
+                                'header' => 'Zero Inflation Impact',
+                                'desc' => 'In developing countries such as Venezuela, life’s a struggle as inflation heads for
+                                                        one million percent.',
+                                'class' => 'eHbXX img_dfts active',
+                                'text_class' => 'vvWMe hbnAur active',
                             ])
-                            @include('partials.unit-tab' ,[
-                            'header' => '2B Access',
-                            'desc' =>'In the world without any access or ability to obtain a bank account or manage their
-                            money.',
-                            'class' => 'eHbXX img_dfts',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' => '2B Access',
+                                'desc' => 'In the world without any access or ability to obtain a bank account or manage their
+                                                        money.',
+                                'class' => 'eHbXX img_dfts',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
 
-                            @include('partials.unit-tab' ,[
-                            'header' => 'Low Volatility Risk',
-                            'desc' =>'Under Low Volatility Risk please change the write up to “One of the big problems is the volatility of crypto. Blockchain remote mining provides a minimal risk return proxy.',
-                            'class' => 'eHbXX img_dfts',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' => 'Low Volatility Risk',
+                                'desc' =>
+                                    'Under Low Volatility Risk please change the write up to “One of the big problems is the volatility of crypto. Blockchain remote mining provides a minimal risk return proxy.',
+                                'class' => 'eHbXX img_dfts',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
-                            @include('partials.unit-tab' ,[
-                            'header' => 'Minimal Complexity',
-                            'desc' =>'Setting up a mining farm is extremely complex with countless smart contracts, this
-                            comes out of the box, pre-installed.',
-                            'class' => 'eHbXX img_dfts',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' => 'Minimal Complexity',
+                                'desc' => 'Setting up a mining farm is extremely complex with countless smart contracts, this
+                                                        comes out of the box, pre-installed.',
+                                'class' => 'eHbXX img_dfts',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
-                            @include('partials.unit-tab' ,[
-                            'header' => 'Early Return on Investment (ROI)',
-                            'desc' =>'With a pre-configured mining farm, return on investment is generated within the first month of deposit, and consecutively.',
-                            'class' => 'eHbXX img_dfts',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' => 'Early Return on Investment (ROI)',
+                                'desc' =>
+                                    'With a pre-configured mining farm, return on investment is generated within the first month of deposit, and consecutively.',
+                                'class' => 'eHbXX img_dfts',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
 
                             <a href="{{ url('register') }}" class="fQXoGc eaEhQt">
@@ -133,51 +135,50 @@
 
                 <div class="iXKGHe isMobile">
                     <div class="slick-carousel  sliderHolder liTytT">
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'Zero Inflation Impact',
-                        'last_text' => 'In developing countries such as Venezuela, life’s a struggle as inflation heads for
-                        one million percent.',
-                        'image_url' => '/assets/images/img-1.png',
-                        'image_width' => '230',
-                        'image_height' => '375'
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Zero Inflation Impact',
+                            'last_text' => 'In developing countries such as Venezuela, life’s a struggle as inflation heads for
+                                                one million percent.',
+                            'image_url' => '/assets/images/img-1.png',
+                            'image_width' => '230',
+                            'image_height' => '375',
                         ])
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => '2B Access',
-                        'last_text' => 'In the world without any access or ability to obtain a bank account or manage their
-                        money.',
-                        'image_url' => '/assets/images/img-2.png',
-                        'image_width' => '269',
-                        'image_height' => '375'
-
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => '2B Access',
+                            'last_text' => 'In the world without any access or ability to obtain a bank account or manage their
+                                                money.',
+                            'image_url' => '/assets/images/img-2.png',
+                            'image_width' => '269',
+                            'image_height' => '375',
                         ])
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'Low Volatility Risk',
-                        'last_text' => 'One of the big problems is the volatility of the cryptocurrencies. the blockchain
-                        mining provide a minimal risk return proxy.',
-                        'image_url' => '/assets/images/img-3.png',
-                        'image_width' => '266',
-                        'image_height' => '375'
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Low Volatility Risk',
+                            'last_text' => 'One of the big problems is the volatility of the cryptocurrencies. the blockchain
+                                                mining provide a minimal risk return proxy.',
+                            'image_url' => '/assets/images/img-3.png',
+                            'image_width' => '266',
+                            'image_height' => '375',
                         ])
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'Minimal Complexity',
-                        'last_text' => 'Setting up a mining farm is extremely complex with countless smart contracts, this
-                        comes out of the box, pre-installed.',
-                        'image_url' => '/assets/images/img-4.png',
-                        'image_width' => '375',
-                        'image_height' => '238'
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Minimal Complexity',
+                            'last_text' => 'Setting up a mining farm is extremely complex with countless smart contracts, this
+                                                comes out of the box, pre-installed.',
+                            'image_url' => '/assets/images/img-4.png',
+                            'image_width' => '375',
+                            'image_height' => '238',
                         ])
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'Early Return on Investment (ROI)',
-                        'last_text' => 'With a pre-configured mining farm, return on first capital investment occurs in less
-                        than 72 hours of first deposit.',
-                        'image_url' => '/assets/images/img-5.png',
-                        'image_width' => '375',
-                        'image_height' => '220'
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Early Return on Investment (ROI)',
+                            'last_text' => 'With a pre-configured mining farm, return on first capital investment occurs in less
+                                                than 72 hours of first deposit.',
+                            'image_url' => '/assets/images/img-5.png',
+                            'image_width' => '375',
+                            'image_height' => '220',
                         ])
                     </div>
                 </div>
@@ -226,67 +227,80 @@
                         </h2>
                         <div class="eyLHGH">
 
-                            @include('partials.unit-tab' ,[
-                            'header' => 'Mine in bitcoin and withdraw in various currecies USD, EUR, and GBP.',
-                            'desc' =>'',
-                            'class' => 'eHbXX img_dfts2',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' =>
+                                    'Mine in bitcoin and withdraw in various currecies USD, EUR, and GBP.',
+                                'desc' => '',
+                                'class' => 'eHbXX img_dfts2',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
-                            @include('partials.unit-tab' ,[
-                            'header' => 'A matching engine that can keep up with you',
-                            'desc' =>'The world’s fastest crypto matching engine, built by and for miners.',
-                            'class' => 'eHbXX img_dfts2',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' => 'A matching engine that can keep up with you',
+                                'desc' => 'The world’s fastest crypto matching engine, built by and for miners.',
+                                'class' => 'eHbXX img_dfts2',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
-                            @include('partials.unit-tab' ,[
-                            'header' => '24/7 live chat support',
-                            'desc' =>'Chat with customer support directly in the Exchange, anytime.',
-                            'class' => 'eHbXX img_dfts2',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' => '24/7 live chat support',
+                                'desc' => 'Chat with customer support directly in the Exchange, anytime.',
+                                'class' => 'eHbXX img_dfts2',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
-                            @include('partials.unit-tab' ,[
-                            'header' => 'Coming soon: NFTs',
-                            'desc' =>'Being able to mine and exchange with NFTs.',
-                            'class' => 'eHbXX img_dfts2',
-                            'text_class' => 'vvWMe hbnAur'
+                            @include('partials.unit-tab', [
+                                'header' => 'Coming soon: NFTs',
+                                'desc' => 'Being able to mine and exchange with NFTs.',
+                                'class' => 'eHbXX img_dfts2',
+                                'text_class' => 'vvWMe hbnAur',
                             ])
                         </div>
                     </div>
                 </div>
                 <div class="llRhaW isMobile">
                     <div class="slick-carousel  sliderHolder liTytT">
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'Mine in bitcoin and withdraw in various currecies USD, EUR, and GBP.',
-                        'last_text' => '',
-                        'image_url' => '/assets/images/img-6.png',
-                        'image_width' => '230',
-                        'image_height' => '375'
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Zero Inflation Impact',
+                            'last_text' => 'In developing countries such as Venezuela, life’s a struggle as inflation heads for
+                                                                    one million percent.',
+                            'image_url' => '/assets/images/img-1.png',
+                            'image_width' => '230',
+                            'image_height' => '375',
                         ])
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'A matching engine that can keep up with you',
-                        'last_text' => 'The world’s fastest crypto matching engine, built by and for miners.',
-                        'image_url' => '/assets/images/img-7.png',
-                        'image_width' => '269',
-                        'image_height' => '375'
-
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => '2B Access',
+                            'last_text' => 'In the world without any access or ability to obtain a bank account or manage their
+                                                                    money.',
+                            'image_url' => '/assets/images/img-2.png',
+                            'image_width' => '269',
+                            'image_height' => '375',
                         ])
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'Chat with customer support directly in the Exchange, anytime.',
-                        'last_text' => 'Chat with customer support directly in the Exchange, anytime.',
-                        'image_url' => '/assets/images/img-8.png',
-                        'image_width' => '266',
-                        'image_height' => '375'
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Low Volatility Risk',
+                            'last_text' => 'One of the big problems is the volatility of the cryptocurrencies. the blockchain
+                                                                    mining provide a minimal risk return proxy.',
+                            'image_url' => '/assets/images/img-3.png',
+                            'image_width' => '266',
+                            'image_height' => '375',
                         ])
-                        @include('partials.card-one' ,[
-                        'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
-                        'mid_text' => 'Coming soon: NFTs',
-                        'last_text' => 'Being able to mine and exchange with NFTs.',
-                        'image_url' => '/assets/images/img-9.png',
-                        'image_width' => '375',
-                        'image_height' => '238'
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Minimal Complexity',
+                            'last_text' => 'Setting up a mining farm is extremely complex with countless smart contracts, this
+                                                                    comes out of the box, pre-installed.',
+                            'image_url' => '/assets/images/img-4.png',
+                            'image_width' => '375',
+                            'image_height' => '238',
+                        ])
+                        @include('partials.card-one', [
+                            'head_text' => 'The Easiest and Most Powerful Crypto Wallet',
+                            'mid_text' => 'Early Return on Investment (ROI)',
+                            'last_text' => 'With a pre-configured mining farm, return on first capital investment occurs in less
+                                                                    than 72 hours of first deposit.',
+                            'image_url' => '/assets/images/img-5.png',
+                            'image_width' => '375',
+                            'image_height' => '220',
                         ])
                     </div>
                 </div>
@@ -323,7 +337,7 @@
                         </h2>
                         <p class=" vvWMe hZpocg">
                             Blockchain Remote Mining is a full-stack crypto services platform that works with
-                             standard and updated mining technology at an extremely profitable rate.
+                            standard and updated mining technology at an extremely profitable rate.
                         </p>
                         <a href="{{ url('register') }}" class="bWXcPk">Become a client</a>
                     </div>
@@ -338,7 +352,6 @@
             <a href="{{ url('register') }}" class="dwFAru">Get Started</a>
         </div>
     </div>
-
 @endsection
 @section('scripts')
     <script src="{{ asset('assets/js/currency.js') }}" defer></script>
