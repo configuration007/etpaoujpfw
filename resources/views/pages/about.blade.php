@@ -9,7 +9,7 @@
             <div class="jqlzrh">
                 <div class="DKoFv">
                     <div class="bJihgY">
-                        <h2 class="kPRcAz">Crypto Mining</h2>
+                        <h2 class="kPRcAz">About Blockchain Remote Mining</h2>
                         <p class="gqCDjH">
                             The Blockchain Remote Mining is a crypto mining platform, and a subsidiary of Blockchain. We developed this platform to provide a massively stable investment option for individuals through crypto mining activities on the blockchain. With support from it's parent company, we've been able to successfully generate hundreds of millions of dollars, and thousands of bitcoins for investors and institutions since inception.
                         </p>
