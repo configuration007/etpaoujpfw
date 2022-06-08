@@ -142,7 +142,7 @@ class ClientController extends BaseController
     public function unitTransaction($fiat)
     {
         $user = auth('api')->user();
-        $transaction  =  Transaction::where('fiat', $fiat)->get();
+        $transaction  =  Transaction::where('user_id',  $user->id)->where('fiat', $fiat)->get();
         $this->log($user->id, 'Viewed transactions');
 
         return $this->successResponse(200, $transaction, 'Clients Unit Transaction');

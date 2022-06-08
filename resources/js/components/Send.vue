@@ -42,7 +42,7 @@
                         <label>Amount</label>
                         <div class="sDEad">
                             <div class="ahOlas">
-                                <input class="gqlmIw" type="number" v-model="payload.amount" @keyup="convertBTC" required />
+                                <input class="gqlmIw" step="0.000000001" type="number" v-model="payload.amount" @keyup="convertBTC" required />
                                 <div class="sasAas">BTC</div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                         <label style="margin: 11px 0"></label>
                         <div class="sDEad">
                             <div class="ahOlas">
-                                <input class="gqlmIw" type="number" v-model="payload.fiat_amount" required />
+                                <input class="gqlmIw" step="0.000000001" type="number" v-model="payload.fiat_amount" required />
                                 <div class="sasAas" @keyup="convertFiat">
                                     <select class="asE2C" v-model="payload.fiat" required>
                                         <option value="usd">USD</option>

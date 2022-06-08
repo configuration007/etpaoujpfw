@@ -342,14 +342,10 @@
                         <p class="gqCDjH">
                             A single mining cycle will run for a duration of 30 days. At the completion of mining cycles, earnings are automatically disbursed from the mining ledger balance into the various connected mining wallets. This cycle based technique helps in delivering returns accordingly. The inception of various security protocols further makes mining on the Blockchain Remote Mining platform safe and secure.        </p>
                         <p class="gqCDjH">
-                            Crypto mining is one of the world’s most lucrative earning process, and Blockchain Remote Mining offers a reasonable amount of generated return on investment (ROI). Understanding the process alone explains how secure mining on our platform can be. 
-
-                        </p>
-                        <p class="gqCDjH">
                             Getting started is straight forward, a simple registration at it’s primary stages using a valid email address is all that is required. This will lead to the generation of a private mining wallet. Users are required to undergo the email verification process to complete registration. The more miners are successfully registered on our platform the higher our harsh rates which causes faster profits, and the less likely for us to incur losses during any stage of mining.</p>
         
                         <p class="gqCDjH">
-                            At the end of mining cycles, users can decide to withdraw their earnings or opt in for    </p>
+                            At the end of mining cycles, users can decide to withdraw their earnings or opt in for a new mining cycle(s).  </p>
                     </div>
                     <div class="eRxyUk">
                         <img src="/assets/images/img-4.png" alt="" width="1075" height="683">

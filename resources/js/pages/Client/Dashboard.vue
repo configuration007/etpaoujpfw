@@ -95,12 +95,7 @@
                         <div class="_js">
                             <div class="total">${{ total | addComma }}</div>
 
-                            <span class="togglebtn">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <polyline points="6 9 12 15 18 9" />
-                                </svg>
-                            </span>
+                         
                         </div>
                     </div>
                 </div>
@@ -329,7 +324,7 @@ export default {
         },
         logOut() {
             localStorage.clear();
-            this.$router.push("/block_access");
+            this.$router.push("/login");
         },
 
         async getUser() {
