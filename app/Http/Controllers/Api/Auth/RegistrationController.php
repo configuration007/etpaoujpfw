@@ -2,20 +2,12 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
-use Exception;
-use Carbon\Carbon;
-use Faker\Factory;
 use App\Models\User;
 use App\Models\Wallet;
 use App\Models\ClientPlan;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Exceptions\ApiException;
 use App\Http\Controllers\Api\HelpersTrait;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\Api\WalletController;
 
 class RegistrationController extends BaseController
 {
@@ -105,8 +97,13 @@ class RegistrationController extends BaseController
         $client = new ClientPlan;
         $client->user_id = $user->id;
         $client->save();
+        
+        $this->log($user->id, 'Registered Successfully');
+
+        // (new VerificationController)->sendVerificationEmail($request);
         return $this->successResponse(201, $user, 'User Created Succesffuly');
         // return $this->successResponse(200, $client, 'Clients');
 
     }
+    
 }

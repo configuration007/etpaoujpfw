@@ -5,13 +5,11 @@ namespace App\Http\Controllers\Api\Auth;
 use Exception;
 use Carbon\Carbon;
 use App\Models\User;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Exceptions\ApiException;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\Api\WalletController;
 
 class VerificationController extends BaseController
 {
@@ -56,6 +54,8 @@ class VerificationController extends BaseController
         $user->email_verified_at = now();
         $user->save();
 
+        $this->log($user->id, 'Email Verified email');
+
         return $this->successResponse(201, $user, 'User Verified succesfully');
     }
 
@@ -87,6 +87,7 @@ class VerificationController extends BaseController
                     $message->from(config('mail.mail_subject_email'));
                 }
             );
+            $this->log($user->id, 'Email Verification Sent');
         } catch (Exception $e) {
 
             return $this->successResponse(400, null, $e->getMessage());

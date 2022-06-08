@@ -3,15 +3,16 @@
 namespace App\Http\Controllers\Api\Auth;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use App\Exceptions\ApiException;
+use App\Http\Controllers\Api\HelpersTrait;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BaseController;
 
 class LoginController extends BaseController
 {
-    
+    use HelpersTrait;
+
     public function loginAdmin(Request $request)
     {
 
@@ -53,6 +54,8 @@ class LoginController extends BaseController
         }
 
         $user = $request->user();
+
+        $this->log($user->id, 'Logged in Successfully');
 
         return response()->json([
             'token' => $user->createToken('Personal Access Token')->accessToken,

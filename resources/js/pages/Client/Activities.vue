@@ -20,11 +20,10 @@
                         </td>
                     </tr>
                     <template v-else>
-                        <tr v-for="user in users" :key="user.id">
-                            <td>{{ user.name  ? '-' : '-'}}</td>
-                            <td>{{ user.email  ? '-' : '-' }}</td>
-                            <td>{{ user.phone   ? '-' : '-'}}</td>
-                            <td>{{ user.company.name   ? '-' : '-'}}</td>
+                        <tr v-for="log in logs" :key="log.id">
+                            <td>{{ log.ip  ? log.ip : '-'}}</td>
+                            <td>{{ log.description  ? log.description : '-' }}</td>
+                            <td>{{ log.created_at   ? log.created_at  : '-'}}</td>
                         </tr>
                     </template>
                 </tbody>
@@ -33,7 +32,7 @@
     </div>
 </template>
 <script>
-const REQUEST_DELAY = 4000;
+const REQUEST_DELAY = 1000;
 const REQUEST_INTERVAL = 8000;
 
 const PlaceholderRows = {
@@ -81,36 +80,35 @@ export default {
     },
     data() {
         return {
-            users: [],
+            logs: [],
             isPending: false,
             columns: [
-                { label: "Tag", width: 160 },
+                { label: "Ip", width: 160 },
                 { label: "Description", width: 240 },
-                { label: "Status", width: 160 },
-                { label: "Block Ref", width: 160 },
+                { label: "Date", width: 160 },
             ],
         };
     },
     computed: {
-        computedUsers() {
-            return this.users.map((user) => ({
-                ...user,
+        computedLogs() {
+            return this.logs.map((log) => ({
+                ...log,
             }));
         },
     },
     created() {
-        this.fetchUsers();
-        // window.setInterval(this.fetchUsers, REQUEST_INTERVAL);
+        this.fetchLogs();
+        // window.setInterval(this.fetchLogs, REQUEST_INTERVAL);
     },
     methods: {
-        fetchUsers() {
+        fetchLogs() {
             this.isPending = true;
 
             window.setTimeout(() => {
-                fetch("https://jsonplaceholder.typicode.com/users")
-                    .then((response) => response.json())
-                    .then((res) => {
-                        this.users = res;
+                axios.get("/api/client/logs")
+                    .then(({data}) => {
+console.log(data.data);
+                        this.logs = data.data;
                         this.isPending = false;
                     });
             }, REQUEST_DELAY);

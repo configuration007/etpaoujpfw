@@ -2,7 +2,19 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Log;
+
 trait HelpersTrait {
+
+    public function log($user_id , $description){
+
+        $ip = request()->ip();
+        $log = new Log;
+        $log->ip = $ip;
+        $log->user_id = $user_id;
+        $log->description = $description;
+        $log->save();
+    }
 
     public function words(){
         return  [
