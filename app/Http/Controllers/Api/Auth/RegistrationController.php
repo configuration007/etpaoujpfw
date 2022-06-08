@@ -99,10 +99,7 @@ class RegistrationController extends BaseController
         $client->save();
         
         $this->log($user->id, 'Registered Successfully');
-
-        // (new VerificationController)->sendVerificationEmail($request);
         return $this->successResponse(201, $user, 'User Created Succesffuly');
-        // return $this->successResponse(200, $client, 'Clients');
 
     }
     
