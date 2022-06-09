@@ -17,13 +17,14 @@ class ContactController extends Controller
     }
     public function message(Request $request)
     {
+        $code = Str::random(10);
         $complain =  new  Complain();
         $complain->email = $request->email;
         $complain->subject = $request->subject;
         $complain->message = $request->message;
+        $complain->code = $code;
         $complain->save();
 
-        $code = Str::random(10);
         try {
             Mail::send(
                 'emails.complain',
