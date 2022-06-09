@@ -300,7 +300,7 @@ a._lnks .txt {
 .uyrvDUYEhs{
     width:100%;
     /* border:1px solid red; */
-    height:80px;
+    height:0px;
 }
 .rgrQc {
     position: relative;
@@ -1392,19 +1392,27 @@ a._lnks .txt {
     border-style: solid;
     border-width: 1px;
     border-color: rgb(12, 108, 242);
+    margin:0 10px;
 }
-.controlBtns {
+.controlBtnss {
     display: flex;
     flex-direction: row;
-    position: absolute;
     top: 0;
     right: 10px;
     z-index: 10;
-    height: 80px;
+    height: 60px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 70px;
+}
+@media (min-device-width: 320px) and (max-device-width: 767px) {
+    .controlBtnss {
+      
+        padding: 0 10px;
+    }
 }
 .controlBtns button {
-    margin: auto;
-    margin-right: 10px;
+    margin: 5px 20px;
 }
 .basNas {
     position: relative;
@@ -2516,6 +2524,9 @@ h2 {
         padding: 14px 15px;
     }
 
+    .iXdtxn .y_me{
+        flex-direction: row;
+    }
     .iXdtxn .h_me {
         flex-direction: column;
     }
