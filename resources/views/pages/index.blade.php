@@ -184,7 +184,7 @@
             </div>
 
             <div class="jqlzrh">
-                <div class="llRhaW isDesktop">
+                {{-- <div class="llRhaW isDesktop">
                     <div class="eZpwdT">
                         <div class="jDwqCc">
                             <div class="ccJpOt">
@@ -253,55 +253,8 @@
                             ])
                         </div>
                     </div>
-                </div>
-                <div class="llRhaW isMobile">
-                    <div class="slick-carousel  sliderHolder liTytT">
-                        @include('partials.card-one', [
-                            'head_text' => 'The Most Powerful Mining Platform',
-                            'mid_text' => 'Zero Inflation Impact',
-                            'last_text' => 'In developing countries such as Venezuela, life’s a struggle as inflation heads for
-                                                                    one million percent.',
-                            'image_url' => '/assets/images/img-1.png',
-                            'image_width' => '230',
-                            'image_height' => '375',
-                        ])
-                        @include('partials.card-one', [
-                            'head_text' => 'The Most Powerful Mining Platform',
-                            'mid_text' => '2B Access',
-                            'last_text' => 'In the world without any access or ability to obtain a bank account or manage their
-                                                                    money.',
-                            'image_url' => '/assets/images/img-2.png',
-                            'image_width' => '269',
-                            'image_height' => '375',
-                        ])
-                        @include('partials.card-one', [
-                            'head_text' => 'The Most Powerful Mining Platform',
-                            'mid_text' => 'Low Volatility Risk',
-                            'last_text' => 'One of the big problems is the volatility of the cryptocurrencies. the blockchain
-                                                                    mining provide a minimal risk return proxy.',
-                            'image_url' => '/assets/images/img-3.png',
-                            'image_width' => '266',
-                            'image_height' => '375',
-                        ])
-                        @include('partials.card-one', [
-                            'head_text' => 'The Most Powerful Mining Platform',
-                            'mid_text' => 'Minimal Complexity',
-                            'last_text' => 'Setting up a mining farm is extremely complex with countless smart contracts, this
-                                                                    comes out of the box, pre-installed.',
-                            'image_url' => '/assets/images/img-4.png',
-                            'image_width' => '375',
-                            'image_height' => '238',
-                        ])
-                        @include('partials.card-one', [
-                            'head_text' => 'The Most Powerful Mining Platform',
-                            'mid_text' => 'Early Return on Investment (ROI)',
-                            'last_text' => 'With a pre-configured mining farm, return on investment is generated within the first month of deposit, and consecutively.',
-                            'image_url' => '/assets/images/img-5.png',
-                            'image_width' => '375',
-                            'image_height' => '220',
-                        ])
-                    </div>
-                </div>
+                </div> --}}
+               
                 <div class="hosPta">
                     <div class="eZpwdT e3rfce">
                         <div class="TDzzN hrbjxUsd">
