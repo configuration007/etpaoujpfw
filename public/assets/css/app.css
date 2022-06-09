@@ -495,7 +495,7 @@ ul.menu-left.collapse {
 .dLGWtx {
     border-top: 1px solid rgb(223, 227, 235);
     position: absolute;
-    bottom: 0px;
+    bottom: 80px;
     left: 0px;
     right: 0px;
     z-index: 2;
