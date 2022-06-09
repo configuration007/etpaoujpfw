@@ -173,8 +173,7 @@
                         @include('partials.card-one', [
                             'head_text' => 'The Most Powerful Mining Platform',
                             'mid_text' => 'Early Return on Investment (ROI)',
-                            'last_text' => 'With a pre-configured mining farm, return on first capital investment occurs in less
-                                                than 72 hours of first deposit.',
+                            'last_text' => 'With a pre-configured mining farm, return on investment is generated within the first month of deposit, and consecutively.',
                             'image_url' => '/assets/images/img-5.png',
                             'image_width' => '375',
                             'image_height' => '220',
